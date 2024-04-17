@@ -69,8 +69,8 @@ int main()
         sf::FloatRect startProgramRect = startProgram.getLocalBounds();
         startProgram.setOrigin(startProgramRect.left + startProgramRect.width / 2.0f,
         startProgramRect.top + startProgramRect.height / 2.0f);
-        startProgram.setPosition(window.getView().getCenter());
-        startProgram.move(0.f, -350.f);
+        Program.setPosition(window.getView().getCenter());
+        Program.move(0.f, -350.f);
 
         Text Counter;
         Counter.setFont(font);
@@ -172,7 +172,7 @@ int main()
 
                 if (points.size() >  0) { startProgram.setFillColor(Color::Black); }
 
-                if (Counter.getFillColor() == Color::Black) {window.draw(Counter);}
+                if (startProgram.getFillColor() == Color::Black) {window.draw(Counter);}
 
                 //for (int i = 0; i < 15; i++) {
                     for (int i = 0; i < vertices.size(); i++)
@@ -194,7 +194,7 @@ int main()
                         else if (randcolor == 2) {rect.setFillColor(Color::Red);}
                         else if (randcolor == 3) {rect.setFillColor(Color::Green);}
                       //  rect.setFillColor(Color::Blue);
-                        Counter.setString("vertices.size()");
+                        Counter.setString(to_string(vertices.size()));
                         window.draw(rect);
                     }
                // }
