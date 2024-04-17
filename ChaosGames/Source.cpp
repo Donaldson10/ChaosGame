@@ -176,14 +176,14 @@ int main()
 
                // if (startProgram.getFillColor() == Color::Black) {window.draw(Counter);}
 
-                    for (int i = 0; i < vertices.size(); i++)
+                    for (long unsigned int i = 0; i < vertices.size(); i++)
                     {
                         RectangleShape rect(Vector2f(5, 5));
                         rect.setPosition(Vector2f(vertices[i].x, vertices[i].y));
                       //  rect.setFillColor(Color::Blue);
                         window.draw(rect);
                     }
-                    for (int i = 0; i < points.size(); i++) {
+                    for (long unsigned int i = 0; i < points.size(); i++) {
                         CircleShape rect(5, 8);
                         rect.setPosition(Vector2f(points[i].x, points[i].y));
                         int randcolor = (rand() % 3) + 1;
