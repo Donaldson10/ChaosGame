@@ -174,6 +174,8 @@ int main()
 
                 if (points.size() >  0) { startProgram.setFillColor(Color::Black); }
 
+                if (startProgram.getFillColor == Color::Black) {window.draw(Counter);}
+
                 //for (int i = 0; i < 15; i++) {
                     for (int i = 0; i < vertices.size(); i++)
                     {
