@@ -72,16 +72,6 @@ int main()
         startProgram.setPosition(window.getView().getCenter());
         startProgram.move(0.f, -350.f);
 
-        Text Counter;
-        Counter.setFont(font);
-        Counter.setCharacterSize(80);
-        Counter.setString("Now Choose a Fourth...\nWisely...");
-        Counter.setFillColor(Color::Red);
-        sf::FloatRect startCounter = Counter.getLocalBounds();
-        startProgram.setOrigin(startCounter.left + startCounter.width / 2.0f,
-        startCounter.top + startCounter.height / 2.0f);
-        Counter.setPosition(window.getView().getCenter());
-        Counter.move(0.f, -350.f);
 
         vector<Vector2f> vertices;
         vector<Vector2f> points;
@@ -172,10 +162,8 @@ int main()
 
                 if (points.size() >  0) { startProgram.setFillColor(Color::Black); }
 
-                if (startProgram.getFillColor() == Color::Black) {window.draw(Counter);}
-
                 //for (int i = 0; i < 15; i++) {
-                    for (long unsigned int i = 0; i < vertices.size(); i++)
+                    for (int i = 0; i < vertices.size(); i++)
                     {
                         RectangleShape rect(Vector2f(5, 5));
                         rect.setPosition(Vector2f(vertices[i].x, vertices[i].y));
@@ -186,7 +174,7 @@ int main()
                       //  rect.setFillColor(Color::Blue);
                         window.draw(rect);
                     }
-                    for (long unsigned int i = 0; i < points.size(); i++) {
+                    for (int i = 0; i < points.size(); i++) {
                         RectangleShape rect(Vector2f(5, 5));
                         rect.setPosition(Vector2f(points[i].x, points[i].y));
                         int randcolor = (rand() % 3) + 1;
@@ -194,7 +182,6 @@ int main()
                         else if (randcolor == 2) {rect.setFillColor(Color::Red);}
                         else if (randcolor == 3) {rect.setFillColor(Color::Green);}
                       //  rect.setFillColor(Color::Blue);
-                        Counter.setString(to_string(vertices.size()));
                         window.draw(rect);
                     }
                // }
