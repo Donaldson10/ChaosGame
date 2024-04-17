@@ -165,7 +165,11 @@ int main()
                     {
                         RectangleShape rect(Vector2f(5, 5));
                         rect.setPosition(Vector2f(vertices[i].x, vertices[i].y));
-                        rect.setFillColor(Color::Blue);
+                          int randcolor = rand()%3;
+                        if (randcolor == 0) {rect.setFillColor(Color::Blue);}
+                        if (randcolor == 1) {rect.setFillColor(Color::Red);}
+                        if (randcolor == 2) {rect.setFillColor(Color::Green);}
+                      //  rect.setFillColor(Color::Blue);
                         window.draw(rect);
                     }
                     for (int i = 0; i < points.size(); i++) {
