@@ -72,6 +72,16 @@ int main()
         startProgram.setPosition(window.getView().getCenter());
         startProgram.move(0.f, -350.f);
 
+        Text Counter;
+        Counter.setFont(font);
+        Counter.setCharacterSize(80);
+        Counter.setString("Now Choose a Fourth...\nWisely...");
+        Counter.setFillColor(Color::Red);
+        sf::FloatRect startCounter = Counter.getLocalBounds();
+        startProgram.setOrigin(startCounter.left + startCounter.width / 2.0f,
+        startCounter.top + startCounter.height / 2.0f);
+        Counter.setPosition(window.getView().getCenter());
+        Counter.move(0.f, -350.f);
 
         vector<Vector2f> vertices;
         vector<Vector2f> points;
@@ -162,6 +172,8 @@ int main()
 
                 if (points.size() >  0) { startProgram.setFillColor(Color::Black); }
 
+                if (Counter.getFillColor() == Color::Black) {window.draw(Counter);}
+
                 //for (int i = 0; i < 15; i++) {
                     for (int i = 0; i < vertices.size(); i++)
                     {
@@ -182,6 +194,7 @@ int main()
                         else if (randcolor == 2) {rect.setFillColor(Color::Red);}
                         else if (randcolor == 3) {rect.setFillColor(Color::Green);}
                       //  rect.setFillColor(Color::Blue);
+                        Counter.setString("vertices.size()");
                         window.draw(rect);
                     }
                // }
