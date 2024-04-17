@@ -184,7 +184,7 @@ int main()
                         window.draw(rect);
                     }
                     for (long unsigned int i = 0; i < points.size(); i++) {
-                        CircleShape rect(5, 8);
+                        CircleShape rect(2, 8);
                         rect.setPosition(Vector2f(points[i].x, points[i].y));
                         int randcolor = (rand() % 3) + 1;
                         if (randcolor == 1) {rect.setFillColor(Color::Blue);}
