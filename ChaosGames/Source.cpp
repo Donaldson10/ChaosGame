@@ -165,7 +165,7 @@ int main()
                     {
                         RectangleShape rect(Vector2f(5, 5));
                         rect.setPosition(Vector2f(vertices[i].x, vertices[i].y));
-                          int randcolor = rand() % 3 + 1;
+                          int randcolor = (rand() % 3) + 1;
                         if (randcolor == 1) {rect.setFillColor(Color::Blue);}
                         else if (randcolor == 2) {rect.setFillColor(Color::Red);}
                         else if (randcolor == 3) {rect.setFillColor(Color::Green);}
@@ -175,7 +175,7 @@ int main()
                     for (int i = 0; i < points.size(); i++) {
                         RectangleShape rect(Vector2f(5, 5));
                         rect.setPosition(Vector2f(points[i].x, points[i].y));
-                        int randcolor = rand() % 3 + 1;
+                        int randcolor = (rand() % 3) + 1;
                         if (randcolor == 1) {rect.setFillColor(Color::Blue);}
                         else if (randcolor == 2) {rect.setFillColor(Color::Red);}
                         else if (randcolor == 3) {rect.setFillColor(Color::Green);}
