@@ -8,6 +8,8 @@
 #include <sstream>
 #include <vector>
 #include <time.h>
+#include <cstdlib>
+#include <ctime>
 
 // Make code easier to type with "using namespace"
 using namespace sf;
