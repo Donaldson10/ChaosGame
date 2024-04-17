@@ -180,7 +180,7 @@ int main()
                     {
                         RectangleShape rect(Vector2f(5, 5));
                         rect.setPosition(Vector2f(vertices[i].x, vertices[i].y));
-                      //  rect.setFillColor(Color::Blue);
+                        rect.setFillColor(Color::Red);
                         window.draw(rect);
                     }
                     for (long unsigned int i = 0; i < points.size(); i++) {
