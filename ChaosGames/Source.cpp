@@ -73,7 +73,7 @@ int main()
         startProgram.setPosition(window.getView().getCenter());
         startProgram.move(0.f, -350.f);
 
-        Text Counter;
+       /* Text Counter;
         Counter.setFont(font);
         Counter.setCharacterSize(80);
         Counter.setString("Now Choose a Fourth...\nWisely...");
@@ -82,7 +82,7 @@ int main()
         startProgram.setOrigin(startCounterrect.left + startCounterrect.width / 2.0f,
         startCounterrect.top + startCounterrect.height / 2.0f);
         Counter.setPosition(window.getView().getCenter());
-        Counter.move(0.f, -350.f);
+        Counter.move(0.f, -350.f); */
 
 
         vector<Vector2f> vertices;
@@ -174,9 +174,8 @@ int main()
 
                 if (points.size() >  0) { startProgram.setFillColor(Color::Black); }
 
-                if (startProgram.getFillColor() == Color::Black) {window.draw(Counter);}
+               // if (startProgram.getFillColor() == Color::Black) {window.draw(Counter);}
 
-                //for (int i = 0; i < 15; i++) {
                     for (int i = 0; i < vertices.size(); i++)
                     {
                         RectangleShape rect(Vector2f(5, 5));
@@ -189,7 +188,7 @@ int main()
                         window.draw(rect);
                     }
                     for (int i = 0; i < points.size(); i++) {
-                        RectangleShape rect(Vector2f(5, 5));
+                        CircleShape rect(5, 8);
                         rect.setPosition(Vector2f(points[i].x, points[i].y));
                         int randcolor = (rand() % 3) + 1;
                         if (randcolor == 1) {rect.setFillColor(Color::Blue);}
@@ -198,7 +197,7 @@ int main()
                       //  rect.setFillColor(Color::Blue);
                         window.draw(rect);
                     }
-                Counter.setString(to_string(vertices.size()));
+               // Counter.setString(to_string(vertices.size()));
                // }
               
 
