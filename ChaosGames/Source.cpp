@@ -180,10 +180,6 @@ int main()
                     {
                         RectangleShape rect(Vector2f(5, 5));
                         rect.setPosition(Vector2f(vertices[i].x, vertices[i].y));
-                          int randcolor = (rand() % 3) + 1;
-                        if (randcolor == 1) {rect.setFillColor(Color::Blue);}
-                        else if (randcolor == 2) {rect.setFillColor(Color::Red);}
-                        else if (randcolor == 3) {rect.setFillColor(Color::Green);}
                       //  rect.setFillColor(Color::Blue);
                         window.draw(rect);
                     }
