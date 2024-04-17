@@ -69,8 +69,8 @@ int main()
         sf::FloatRect startProgramRect = startProgram.getLocalBounds();
         startProgram.setOrigin(startProgramRect.left + startProgramRect.width / 2.0f,
         startProgramRect.top + startProgramRect.height / 2.0f);
-        Program.setPosition(window.getView().getCenter());
-        Program.move(0.f, -350.f);
+        startProgram.setPosition(window.getView().getCenter());
+        startProgram.move(0.f, -350.f);
 
         Text Counter;
         Counter.setFont(font);
