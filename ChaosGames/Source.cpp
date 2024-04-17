@@ -197,7 +197,7 @@ int main()
                       //  rect.setFillColor(Color::Blue);
                         window.draw(rect);
                     }
-               // Counter.setString(to_string(vertices.size()));
+               // Counter.setString(to_string(points.size()));
                // }
               
 
