@@ -10,6 +10,7 @@
 #include <time.h>
 #include <cstdlib>
 #include <ctime>
+#include <string>
 
 // Make code easier to type with "using namespace"
 using namespace sf;
@@ -71,6 +72,17 @@ int main()
         startProgramRect.top + startProgramRect.height / 2.0f);
         startProgram.setPosition(window.getView().getCenter());
         startProgram.move(0.f, -350.f);
+
+        Text Counter;
+        Counter.setFont(font);
+        Counter.setCharacterSize(80);
+        Counter.setString("Now Choose a Fourth...\nWisely...");
+        Counter.setFillColor(Color::Red);
+        sf::FloatRect startCounterrect = Counter.getLocalBounds();
+        startProgram.setOrigin(startCounterrect.left + startCounterrect.width / 2.0f,
+        startCounterrect.top + startCounterrect.height / 2.0f);
+        Counter.setPosition(window.getView().getCenter());
+        Counter.move(0.f, -350.f);
 
 
         vector<Vector2f> vertices;
@@ -184,6 +196,7 @@ int main()
                       //  rect.setFillColor(Color::Blue);
                         window.draw(rect);
                     }
+                Counter.setString(to_string(vertices.size()));
                // }
               
 
